@@ -23,12 +23,12 @@ RSpec.describe 'Todos API', type: :request do
   
   # Tets suite for GET /todos/:id
   describe 'GET /todos/:id' do
-    before { get "todos/#{todo_id}" }
+    before { get "/todos/#{todo_id}" }
     
     context 'when the record exists' do
       it 'returns the todo' do
         expect(json).not_to be_empty
-        expect(json[id]).to eq(todo_id)
+        expect(json['id']).to eq(todo_id)
       end
       
       it 'returns status code 200' do
@@ -98,7 +98,7 @@ RSpec.describe 'Todos API', type: :request do
   
   # Test suite for DELETE /todos/:id
   describe 'DELETE /todos/:id' do
-    before { delete "/todos/#{todos_id}" }
+    before { delete "/todos/#{todo_id}" }
     
     it 'returns status code 204' do
       expect(response).to have_http_status(204)
