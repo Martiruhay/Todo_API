@@ -13,7 +13,7 @@ class Message
   end
 
   def self.missing_token
-    "Missing token"
+    'Missing token'
   end
 
   def self.unauthorized

@@ -1,5 +1,4 @@
 module ExceptionHandler
-  
   extend ActiveSupport::Concern
 
   # Define custom error subclasses - rescue catches `StandardErrors`
